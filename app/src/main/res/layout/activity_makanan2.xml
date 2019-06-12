@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MakananActivity"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/background_right"
+        android:scaleType="fitXY"
+        android:translationX="-25dp"
+        android:translationY="-10dp"/>
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    android:background="@drawable/background_circle"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/back"
+                    android:textSize="20sp"
+                    android:text="Makanan"
+                    android:id="@+id/tv_nama_makanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/rel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:orientation="horizontal">
+            <EditText
+                android:padding="7dp"
+                android:background="@drawable/search_layout"
+                android:id="@+id/edt_cari"
+                android:hint="Cari .."
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_marginLeft="7dp"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                android:src="@drawable/ic_search_black_24dp"
+                android:background="@drawable/background_circle"
+                android:layout_width="35dp"
+                android:layout_height="35dp" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_makanan"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/rel1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+</RelativeLayout>

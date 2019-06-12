@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.Makanan.DeskripsiFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- TODO: Update blank fragment layout -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="#f1f1f1">
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/card">
+                <LinearLayout
+                    android:layout_below="@id/tv_makanan_kategori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <ImageView
+                        android:tint="@android:color/holo_blue_dark"
+                        android:src="@drawable/ic_star_black_24dp"
+                        android:layout_width="50dp"
+                        android:scaleType="fitXY"
+                        android:layout_height="50dp"
+                        android:id="@+id/img_rating"/>
+                    <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:text="Jumlah"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/black"
+                            android:id="@+id/tv_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="10dp">
+                            <TextView
+                                android:text="Jumlah"
+                                android:textColor="@android:color/black"
+                                android:layout_gravity="center"
+                                android:id="@+id/tv_feedback"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:text=" orang"
+                                android:textColor="@android:color/black"
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_margin="10dp"
+                android:layout_below="@id/card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:id="@+id/title"
+                        android:layout_margin="20dp"
+                        android:textSize="20sp"
+                        android:text="Deskripsi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:textAlignment="inherit"
+                        android:layout_margin="20dp"
+                        android:layout_below="@id/title"
+                        android:id="@+id/tv_dekripsi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:justificationMode="none"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>
